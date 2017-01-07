@@ -1,6 +1,6 @@
 {
   "name": "homebridge-logger",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "description": "A characteristic value persistent logger, intended for use with homebridge plugins.",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,12 @@
     "logger"
   ],
   "author": "Dylan Lewis",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanslewis/homebridge-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dylanslewis/homebridge-logger/issues"
+  }
 }

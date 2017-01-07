@@ -3,7 +3,6 @@ var fs = require('fs');
 var os = require('os');
 
 // Variables
-var pluginName = 'homebridge-logger';
 var valueSeparator = ', ';
 var printConsoleLogs = true;
 
@@ -14,10 +13,6 @@ exports.logCharacteristicUpdateForDevice = function logCharacteristicUpdateForDe
   const output = `time=${time}${valueSeparator}name=${device}${valueSeparator}characteristic=${characteristic}${valueSeparator}value=${value}\n`;
 
   logOutput(output);
-}
-
-exports.setPluginName = function setPluginName(name) {
-  pluginName = name;
 }
 
 exports.setValueSeparator = function setValueSeparator(separator) {
@@ -36,7 +31,7 @@ function logOutput(output) {
 
   const now = new Date();
   const date = `${now.getDate()}-${now.getMonth()}-${now.getYear()}`;
-  const path = `${os.homedir()}/.homebridge/logs/${date}${pluginName}.log`;
+  const path = `${os.homedir()}/.homebridge/logs/${date}characteristic_updates.log`;
 
   fs.exists(path, function(exists) {
     if (exists) {
